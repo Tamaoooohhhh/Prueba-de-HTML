@@ -70,9 +70,10 @@ nav a {
     margin: 0px 15px;
     transition: font-size 0.3s, font-weight 0.3s, color 0.3s;
     box-shadow: 5px 5px 1 #252429;
+    outline: none;
 }
 
-nav a:hover {
+nav a:hover, nav a:focus {
     font-weight: bold;
     font-size: 110%;
     color: #81758F
@@ -146,7 +147,13 @@ input {
     font-family: var(--fuente-cormorant);
     width: 90%;
     height: 24px;
+    outline: none;
 
+}
+
+input:focus {
+    border: 1px var(--color-acento);
+    border-color: var(--color-acento-rosa-seleccionado)
 }
 
 input[type="text"],
@@ -160,11 +167,6 @@ input[type="email"] { width: 100%;
     font-style: italic;
     background: var(--color-superficie-alterna);
     outline: none;
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus {
-    border-color: var(--color-borde-acento);
 }
 
 input[type="submit"],
@@ -192,7 +194,7 @@ input[type="submit"] {
     ;
 }
 
-input[type="submit"]:hover {
+input[type="submit"]:hover, input[type="submit"]:focus {
     background-color: var(--color-acento-seleccionado);
     transform: translateY(-2px);
     color: var(--color-titulo);
@@ -200,13 +202,13 @@ input[type="submit"]:hover {
                 0 0 12px var(--color-resplandor-rosa)
 }
 
-input[type="reset"] {
+input[type="reset"]  {
     background-color: var(--color-acento-rosa);
     color: var(--color-subtitulo);
     margin-left: 5px;
 }
 
-input[type="reset"]:hover {
+input[type="reset"]:hover, input[type="reset"]:focus {
     background-color: var(--color-acento-rosa-seleccionado);
     transform: translateY(-2px);
     color: var(--color-titulo);
@@ -259,12 +261,20 @@ tbody tr:nth-child(odd) {
     background: var(--color-tabla-fila);
 }
 
-tbody tr {
+tbody tr, tr:focus {
     transition: background 0.3s;
+    outline: 1px var(--color-borde-acento)
 }
+
 tbody tr:hover {
     background: var(--color-tabla-seleccionada);
 }
+
+tr:focus {
+    font-weight: 800;
+
+} 
+
 
 footer {
     background: var(--color-pie);
