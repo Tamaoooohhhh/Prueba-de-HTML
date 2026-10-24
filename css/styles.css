@@ -130,11 +130,13 @@ img {
 }
 
 label {
-    font-family: "Cormorant Garamond" serif;;
+    font-family: "Cormorant Garamond" sans-serif;
     padding: 15px;
     font-style: italic;
     margin-left: 15px;
-    margin-bottom: 115px
+    margin-bottom: 115px;
+    font-size: 17px;
+    font-weight: 200;
 }
 
 input {
@@ -226,6 +228,7 @@ table {
     margin: 50px 300px;
     overflow: hidden;
     font-style: italic;
+    font-size: 18px;
     box-shadow: 0 0 24px rgba(201, 195, 210, 0.28); 
     
 }
@@ -274,8 +277,9 @@ footer {
 
 .derechos_reservados {
     margin-bottom: 0px;
-    font-weight: 300;
+    font-weight: 400;
     font-style: italic;
+    font-size: 21px;
     
 }
 
