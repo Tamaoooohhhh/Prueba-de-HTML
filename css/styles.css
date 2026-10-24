@@ -26,7 +26,7 @@
   --color-tabla-seleccionada: #D9D1E2;
 
   --color-sombra: rgba(100, 95, 105, 0.08);
-  --color-resplandor: rgba(201, 195, 210, 0.28);
+  --color-resplandor: rgba(201, 195, 210, 0.48);
   --color-resplandor-rosa: rgba(222, 210, 213, 0.48);
   
   --fuente-cormorant: "Cormorant Garamond", serif;
@@ -68,12 +68,14 @@ nav {
 nav a {
     color: var(--color-titulo);
     margin: 0px 15px;
-    transition: font-size 0.4s, font-weight 0.4s;
+    transition: font-size 0.3s, font-weight 0.3s, color 0.3s;
+    box-shadow: 5px 5px 1 #252429;
 }
 
 nav a:hover {
     font-weight: bold;
     font-size: 110%;
+    color: #81758F
 }
 
 header {
@@ -86,6 +88,8 @@ h3 {
     font-family: "Cormorant Garamond", serif;
     color: var(--color-subtitulo);
     font-style: italic;
+    font-size: 23px;
+    font-weight: 900;
 }
 
 .subtitulo_tarjeta {
@@ -97,8 +101,8 @@ h3 {
 
 p {
     padding: 15px;
-    font-size: 18px;
-    margin-bottom: 15px;
+    font-size: 21px;
+    margin-bottom: 6px;
 }
 
 section:not(.tabla) {
@@ -139,36 +143,43 @@ input {
     margin-bottom: 10px;
     font-family: var(--fuente-cormorant);
     width: 90%;
-    height: auto;
+    height: 24px;
 
 }
 
 input[type="text"],
 input[type="email"] { width: 100%;
-    padding: 12px;
+    padding: 9px 15px;
     margin-top: 5px;
-    border: 1px solid var(--color-borde-claro);
+    border: 1px solid var(--color-borde);
     border-radius: 12px;
-    font-size: 15px;
+    font-size: 18px;
     width: 81%;
     font-style: italic;
     background: var(--color-superficie-alterna);
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+    border-color: var(--color-borde-acento);
 }
 
 input[type="submit"],
 input[type="reset"] {
     background: var(--color-acento-suave);
     color: var(--color-subtitulo);
-    padding: 4px 8px;
-    margin-bottom: 5px;
+    padding: 4px 12px;
+    margin-bottom: 9px;
     margin-right: 0px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
     font-size: 15px;
-    transition: transform 0.5s, background-color 0.5s, color 0.5s;
+    transition: transform 0.5s, background-color 0.5s, color 0.5s,
+                box-shadow 0.4s;
     width: 22%;
-    font-size: 11px;
+    font-size: 14px;
     font-weight: 700;
     font-style: italic;
 }
@@ -176,13 +187,15 @@ input[type="reset"] {
 input[type="submit"] {
     background-color: var(--color-acento);
     color: var(--color-subtitulo);
-    box-shadow: 0 0 24px rgba(201, 195, 210, 0.28);
+    ;
 }
 
 input[type="submit"]:hover {
     background-color: var(--color-acento-seleccionado);
     transform: translateY(-2px);
-    color: var(--color-titulo)
+    color: var(--color-titulo);
+    box-shadow: 0 0 25px var(--color-resplandor),
+                0 0 12px var(--color-resplandor-rosa)
 }
 
 input[type="reset"] {
@@ -194,7 +207,9 @@ input[type="reset"] {
 input[type="reset"]:hover {
     background-color: var(--color-acento-rosa-seleccionado);
     transform: translateY(-2px);
-    color: var(--color-titulo)
+    color: var(--color-titulo);
+    box-shadow: 0 0 25px var(--color-resplandor),
+                0 0 12px var(--color-resplandor-rosa)
 }
 
 
@@ -242,7 +257,7 @@ tbody tr:nth-child(odd) {
 }
 
 tbody tr {
-    transition: background 0.5s;
+    transition: background 0.3s;
 }
 tbody tr:hover {
     background: var(--color-tabla-seleccionada);
@@ -254,6 +269,7 @@ footer {
     font-family: "Cormorant Garamond", sans-serif;
     padding-bottom: 5px;
     padding-top: 5px;
+    border-top: 1px var(--color-borde);
 }
 
 .derechos_reservados {
