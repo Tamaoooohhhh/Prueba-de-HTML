@@ -47,6 +47,12 @@ h1 {
     font-family: "Cormorant Garamond", serif;
     padding: 30px;
     font-style: italic;
+    transition: transform 0.3s;
+    outline: none;
+}
+
+h1:focus {
+    transform: translateY(-3px)
 }
 
 section  p {
@@ -68,15 +74,19 @@ nav {
 nav a {
     color: var(--color-titulo);
     margin: 0px 15px;
-    transition: font-size 0.3s, font-weight 0.3s, color 0.3s;
+    transition: font-size 0.3s, font-weight 0.3s, color 0.3s, letter-spacing 0.4s;
     box-shadow: 5px 5px 1 #252429;
     outline: none;
+    text-decoration: none;
+    padding: 16px;
+    font-weight: 500;
 }
 
 nav a:hover, nav a:focus {
-    font-weight: bold;
+    font-weight: 900;
     font-size: 110%;
-    color: #81758F
+    color: #81758F;
+    letter-spacing: 0.81px;
 }
 
 header {
@@ -96,7 +106,7 @@ h3 {
 }
 
 h3:focus {
-    transform: translateX(35px);
+    transform: translateX(15px);
 }
 
 
@@ -147,8 +157,14 @@ img:focus {
 .subtitulo_formulario {
     padding: 15px;
     margin-left: 15px;
-    
+    outline: none;
+    transition: transform 0.4s;
 }
+
+.subtitulo_formulario:focus {
+    transform: translateX(15px);
+}
+
 
 label {
     font-family: "Cormorant Garamond" sans-serif;
@@ -168,12 +184,17 @@ input {
     width: 90%;
     height: 24px;
     outline: none;
+    
 
 }
 
-input:focus {
+input:focus::placeholder {
+    transition: color 0.34s, transform 0.4s;
+
     border: 1px var(--color-acento);
-    border-color: var(--color-acento-rosa-seleccionado)
+    border-color: var(--color-acento-rosa-seleccionado);
+    color: transparent;
+    transform: translateX(14px);
 }
 
 input[type="text"],
@@ -237,10 +258,7 @@ input[type="reset"]:hover, input[type="reset"]:focus {
 }
 
 
-a {
-    text-decoration: none;
-    border-spacing: 15px;
-}
+
 
 table {
     border-collapse: separate;
@@ -290,7 +308,9 @@ tbody tr:hover {
     background: var(--color-tabla-seleccionada);
 }
 
+
 tr:focus {
+    transition: font-weight 0.3s;
     font-weight: 800;
 
 } 
@@ -310,7 +330,16 @@ footer {
     font-weight: 400;
     font-style: italic;
     font-size: 21px;
-    
+    text-decoration: none;
+    color: var(--color-texto);
+    outline: none;
+    padding: 12px 0px;
+    display: inline-block;
+}
+
+.derechos_reservados:focus, .derechos_reservados:hover  {
+    transition: font-weight 0.3s;
+    font-weight: 900;
 }
 
 .tabla {
