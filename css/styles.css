@@ -91,7 +91,14 @@ h3 {
     font-style: italic;
     font-size: 23px;
     font-weight: 900;
+    outline: none;
+    transition: transform 0.4s;
 }
+
+h3:focus {
+    transform: translateX(35px);
+}
+
 
 .subtitulo_tarjeta {
     margin-left: 35px;
@@ -104,6 +111,13 @@ p {
     padding: 15px;
     font-size: 21px;
     margin-bottom: 6px;
+    text-shadow: 0 0 8px #9e99b9ad, 0 0 20px #9c96b95e;
+    transition: transform 0.4s;
+    outline: none;
+}
+
+p:focus {
+    transform: translateX(15px);
 }
 
 section:not(.tabla) {
@@ -122,8 +136,14 @@ img {
     display: flex;
     scale: 0.9;
     border-radius: 25px;
+    outline: none;
+    transition: filter 0.3s, transform 0.3s;
 }
 
+img:focus {
+    filter: drop-shadow(0 0 20px #9993b696);
+    transform: translateY(-23px);
+}
 .subtitulo_formulario {
     padding: 15px;
     margin-left: 15px;
