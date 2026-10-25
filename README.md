@@ -1,4 +1,4 @@
-### 𐔌˙.
+### ⊹ ࣪ ˖ [Vista de la página](https://tamaoooohhhh.github.io/Prueba-de-HTML/) ⊹ ࣪ ˖
 
 ### *Glosario*
 
@@ -12,14 +12,14 @@ Pseudoelementos (::), preguntan “qué parte o qué extra”:
 
 '::placeholder' cuando se selecciona un input de un formulario para empezar a indexar contenido.
 
-### _Estilos aplicados por parte_
+### _Estilos aplicados por partes_
 
-### *Nav*
+### *nav*
 
 atributos al tener el mouse encima (:hover): letter-spacing, color, font-weight, font-size
 con un transition de 0.3s
 
-### *H1*
+### *h1*
 
 TranslateX al tenerlo focus.
 
@@ -29,7 +29,7 @@ TranslateX al tenerlo focus.
 
 ':hover' y ':focus' con 'TranslateY(-23px)'
 
-### *H3 (subtitulos)*
+### *h3 (subtitulos)*
 
 TranslateX hacia la derecha al tenerlo en focus o con el mouse encima.
 
